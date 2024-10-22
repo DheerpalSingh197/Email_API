@@ -1,0 +1,64 @@
+
+# Email Management System Documentation
+
+## Overview
+
+This project is an Email Management System built with Node.js and React. It allows users to fetch emails from a Gmail account via IMAP, store them in a MySQL database, and search through them using a web interface.
+
+## Tech Stack
+
+- **Backend**: Node.js, Express.js, MySQL
+- **Frontend**: React
+- **Email Handling**: IMAP (using the `imap` library), `mailparser`
+- **Environment Management**: dotenv
+- **CORS**: cors
+
+
+### Prerequisites
+
+- Node.js
+- MySQL
+- Gmail account with IMAP enabled
+
+### Setup
+
+1. Clone the repository.
+2. Run `npm install` in both the backend and frontend directories to install dependencies.
+3. Start the MySQL server and create the required database and table:
+
+
+   # MY SQL Config - Verify These
+    DB_HOST = localhost
+    DB_USER = root
+    DB_NAME = email_database
+
+  
+   CREATE TABLE emails (
+       id INT AUTO_INCREMENT PRIMARY KEY,
+       subject VARCHAR(255),
+       sender VARCHAR(255),
+       body TEXT,
+       received_date DATETIME,
+       message_id VARCHAR(255) UNIQUE
+   );
+   
+
+
+4. Start the backend server:
+    
+   - nodemon server.js
+    
+    
+5. Start the frontend application (in a separate terminal):
+
+   - npm run dev
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
